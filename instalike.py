@@ -7,7 +7,6 @@ from selenium.webdriver.common.keys import Keys
 import urllib.parse
 import time
 from time import sleep
-import pyautogui
 
 # herokuのchromedriverのPATHを指定
 driver_path = '/app/.chromedriver/bin/chromedriver'
