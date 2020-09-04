@@ -45,29 +45,6 @@ driver.get("https://www.instagram.com/explore/tags/ポイ活/")
 driver.implicitly_wait(6)
 sleep(2)
  #Endkeyを押してスクロール、最大いいね数を増やす(１スクロールで20件表示を増やす)
-pyautogui.hotkey('End')
-driver.implicitly_wait(10)
-sleep(6)
-
-pyautogui.hotkey('End')
-driver.implicitly_wait(10)
-sleep(6)
-
-pyautogui.hotkey('End')
-driver.implicitly_wait(10)
-sleep(6)
-
-pyautogui.hotkey('End')
-driver.implicitly_wait(10)
-sleep(6)
-
-pyautogui.hotkey('End')
-driver.implicitly_wait(10)
-sleep(6)
-
-pyautogui.hotkey('End')
-driver.implicitly_wait(10)
-sleep(6)
 
 
 driver.find_element_by_xpath("//article/div[1]/div[1]/div[1]/div[1]/div[1]/a").click()
