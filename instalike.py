@@ -10,25 +10,31 @@ from time import sleep
 import bs4
 import random
 
-# herokuのchromedriverのPATHを指定
 driver_path = '/app/.chromedriver/bin/chromedriver'
 options = webdriver.ChromeOptions()
+options.add_argument('--headless')
+#※headlessにしている
 driver = webdriver.Chrome(options=options, executable_path=driver_path)
 
 #instagramにアクセス
 driver.get("https://www.instagram.com/accounts/login/")
 driver.implicitly_wait(10)
 sleep(1)
+print("インスタグラムにアクセスしました")
  #ログインID・PWを入力
 elem_search_word = driver.find_element_by_name("username")
 elem_search_word.send_keys("financedog")
 sleep(1)
+print("ユーザーIDを入力しました")
 password = driver.find_element_by_name('password')
 password.send_keys("yasu01")
 sleep(1)
+print("ユーザーPWを入力しました")
 password.send_keys(Keys.ENTER)
 driver.implicitly_wait(10)
 sleep(10)
+print("２段階認証に入ります")
+
  #２段階認証の保存を選択
 elem_search_word = driver.find_element_by_css_selector("button.sqdOP").click()
 driver.implicitly_wait(5)
