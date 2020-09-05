@@ -45,7 +45,7 @@ URL03 = ("●●●")
  #すきなインフルエンサーへのアクセス
 driver.get(URL01)
 driver.implicitly_wait(6)
-sleep(1) #インフルエンサーへのアクセスプロセスを定義
+sleep(5) #インフルエンサーへのアクセスプロセスを定義
 def crowl():
 
    driver.find_elements_by_css_selector("li.Y8-fY")[1].click()
