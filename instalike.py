@@ -32,14 +32,7 @@ sleep(1)
 print("ユーザーPWを入力しました")
 password.send_keys(Keys.ENTER)
 driver.implicitly_wait(10)
-sleep(10)
-print("２段階認証に入ります")
-
- #２段階認証の保存を選択
-elem_search_word = driver.find_element_by_css_selector("button.sqdOP").click()
-driver.implicitly_wait(5)
 sleep(5)
-
 
 
 """
