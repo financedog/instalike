@@ -48,7 +48,7 @@ driver.implicitly_wait(6)
 sleep(5) #インフルエンサーへのアクセスプロセスを定義
 def crowl():
 
-   driver.find_elements_by_css_selector("li.Y8-fY")[1].click()
+   driver.find_element_by_xpath("//*[@id='react-root']/section/main/div/header/section/ul/li[2]").click()
    sleep(3)
    li = driver.find_element_by_css_selector("div.isgrP")
    # 自動スクロール
