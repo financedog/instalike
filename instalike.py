@@ -38,11 +38,8 @@ print("２段階認証に入ります")
  #２段階認証の保存を選択
 elem_search_word = driver.find_element_by_css_selector("button.sqdOP").click()
 driver.implicitly_wait(5)
-sleep(10)
- #ポップアップの後でを選択
-elem_search_word = driver.find_element_by_css_selector("button.aOOlW").click()
-driver.implicitly_wait(2)
-sleep(3)
+sleep(5)
+
 
 
 """
