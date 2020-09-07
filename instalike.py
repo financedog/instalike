@@ -10,6 +10,20 @@ from time import sleep
 import bs4
 import random
 
+import requests
+
+# LINE Notifyのアクセス（自分が発行したトークンへ変更）
+line_notify_token = 'jdDIwTrFHAyqx3084BH5LUTPjaC9MkpEhWJvPsrkSJo'
+# LINE NotifyのAPIアドレス（このままでOK）
+line_notify_api = 'https://notify-api.line.me/api/notify'
+ 
+#　送りたいメッセージ内容
+message =  "これよりherokuでツールを回します"
+payload = {'message': message}
+headers = {'Authorization': 'Bearer ' + line_notify_token} 
+line_notify = requests.post(line_notify_api, data=payload, headers=headers)
+
+
 driver_path = '/app/.chromedriver/bin/chromedriver'
 options = webdriver.ChromeOptions()
 options.add_argument('--headless')
