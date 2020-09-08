@@ -9,7 +9,6 @@ import time
 from time import sleep
 import bs4
 import random
-
 import requests
 
 # LINE Notifyのアクセス（自分が発行したトークンへ変更）
