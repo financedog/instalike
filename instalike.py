@@ -52,7 +52,7 @@ sleep(5)
 1投稿目のインフルエンサーへ
 """ #すきなインフルエンサーのURLを●●●にコピペします。
 
-URL01 = ("https://www.instagram.com/ringo_56565/")
+URL01 = ("https://www.instagram.com/nyantaro_investor/")
 URL02 = ("●●●")
 URL03 = ("●●●")
  #すきなインフルエンサーへのアクセス
