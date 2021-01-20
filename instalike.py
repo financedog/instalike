@@ -28,7 +28,7 @@ options = webdriver.ChromeOptions()
 options.add_argument('--headless')
 #※headlessにしている
 driver = webdriver.Chrome(options=options, executable_path=driver_path)
-
+"""
 #instagramにアクセス
 driver.get("https://www.instagram.com/accounts/login/")
 driver.implicitly_wait(10)
@@ -48,7 +48,7 @@ driver.implicitly_wait(10)
 sleep(5)
 
 
-"""
+
 1投稿目のインフルエンサーへ
 """ #すきなインフルエンサーのURLを●●●にコピペします。
 
