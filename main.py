@@ -26,25 +26,21 @@ def main():
     # ブラウザ起動
     driver.get(url)
     driver.implicitly_wait(15)
-    sleep()
+    sleep(3)
 
     print("ログインページにアクセス")
 
-    #accept allをクリック
-    try:
-       driver.find_element_by_xpath("//button[text()='Accept All']").click()
-       print("accept allをクリックしました")
-    except:
-        pass
-    
+
     # ログイン処理
-    user = driver.find_element_by_name("username")
+    user = driver.find_element_by_css_selector("input[name='username']")
     user.send_keys(id)
     print("ログインIDを入力")
+    sleep(2)
 
-    password = driver.find_element_by_name('password')
+    password = driver.find_element_by_css_selector("input[name='password']")
     password.send_keys(ps)
     print("PWを入力")
+    sleep(2)
 
     #accept allをクリック
     try:
