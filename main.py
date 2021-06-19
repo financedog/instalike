@@ -29,7 +29,16 @@ def main():
     driver.get(url)
     print("ログインページにアクセス")
 
-
+    #番号が表示されているページをスクリーンショット
+    driver.save_screenshot('result.png')
+    #コマンドライン上で保存したSSをフリーのアップロードサイトへ
+    #アップロード後、公開されているURLがresultに保存されます
+    result = subprocess.check_output(["curl", "--upload-file", "./result.png",  "https://transfer.sh/"])
+    #bytesからutf-8へデコード
+    result = result.decode('utf-8')
+    #アップロードされているURL表示
+    print(result)
+    
     # ログイン処理
     user = driver.find_element_by_name("username")
     user.send_keys(id)
