@@ -1,6 +1,5 @@
 def main():
 
-    from subprocess import run
     from selenium import webdriver
     import random
     from time import sleep
@@ -25,19 +24,18 @@ def main():
     count="70"
 
     # ブラウザ起動
-    driver.implicitly_wait(15)
     driver.get(url)
+    driver.implicitly_wait(15)
+    sleep()
+
     print("ログインページにアクセス")
 
-    #番号が表示されているページをスクリーンショット
-    driver.save_screenshot('result.png')
-    #コマンドライン上で保存したSSをフリーのアップロードサイトへ
-    #アップロード後、公開されているURLがresultに保存されます
-    result = subprocess.check_output(["curl", "--upload-file", "./result.png",  "https://transfer.sh/"])
-    #bytesからutf-8へデコード
-    result = result.decode('utf-8')
-    #アップロードされているURL表示
-    print(result)
+    #accept allをクリック
+    try:
+       driver.find_element_by_xpath("//button[text()='Accept All']").click()
+       print("accept allをクリックしました")
+    except:
+        pass
     
     # ログイン処理
     user = driver.find_element_by_name("username")
