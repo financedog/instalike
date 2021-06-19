@@ -29,12 +29,13 @@ def main():
     driver.get(url)
     print("ログインページにアクセス")
 
+
     # ログイン処理
-    user = driver.find_element_by_css_selector("input[name='username']")
+    user = driver.find_element_by_name("username")
     user.send_keys(id)
     print("ログインIDを入力")
 
-    password = driver.find_element_by_css_selector("input[name='password']")
+    password = driver.find_element_by_name('password')
     password.send_keys(ps)
     print("PWを入力")
 
