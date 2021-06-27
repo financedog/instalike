@@ -7,8 +7,16 @@ def main():
 
     driver_path = '/app/.chromedriver/bin/chromedriver'
     options = webdriver.ChromeOptions()
-    options.add_argument('--headless')
-    #driverに設定 ※optionsを指定しないとheadlessにならないので注意
+    options.add_argument("--headless")
+    options.add_argument("--disable-gpu")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-extensions")
+    options.add_argument("--proxy-server='direct://'")
+    options.add_argument("--proxy-bypass-list=*")
+    options.add_argument("--start-maximized")
+    options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36")
+
+    # driverに設定 ※optionsを指定しないとheadlessにならないので注意
     driver = webdriver.Chrome(options=options, executable_path=driver_path)
 
     # ログインページURL
